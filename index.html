@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Full Redemption Chapel, Gbogbo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #4b002d;
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header img {
+      height: 50px;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .container {
+      padding: 40px;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    h1, h2 {
+      color: #4b002d;
+    }
+    .card {
+      background-color: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-top: 20px;
+      display: none;
+    }
+    footer {
+      background-color: #4b002d;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .profile-img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="GBOGBO.png" alt="Church Logo" />
+    <nav>
+      <a onclick="toggleSection('goCard')">About Our General Overseer</a>
+      <a onclick="toggleSection('bpCard')">About Our Resident Pastor</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section class="section">
+      <h1>Welcome to Full Redemption Chapel, Gbogbo (Faith Arena)</h1>
+      <p><strong>Venue:</strong> Behind Wema Bank Plc, Gbogbo, Modakeke, Osun State, Nigeria</p>
+      <p><strong>Mission:</strong> To preach the undiluted Word of God and raise mature disciples in Christ.</p>
+      <p><strong>Vision:</strong> To take the full message of the gospel to every lost soul across the world.</p>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="section">
+      <h2>About Full Redemption Chapel, Gbogbo</h2>
+      <p>Full Redemption Chapel, Gbogbo (Faith Arena) is a vibrant and spiritually empowering church in Modakeke, Osun State, Nigeria. We are part of the global movement of Jesus is Lord Foundation International, committed to sharing the Gospel and making disciples of Jesus Christ. Our church is a place where the Word of God is preached in its purest form, and individuals are nurtured in faith. We strive to create a welcoming environment where everyone can grow in their relationship with Christ and be part of a supportive community. Our mission is to raise mature disciples and impact lives positively, not just locally but globally.</p>
+    </section>
+
+    <div id="goCard" class="card">
+      <h2>General Overseers</h2>
+      <p><strong>Rev. Dr. Francis Olonade</strong> is the General Overseer of Jesus is Lord Foundation International. Called and commissioned in 1980, he continues to lead a global evangelism movement. His wife, <strong>Rev. Dr. Grace Olonade</strong>, serves as Vice President and Senior Pastor of Full Redemption Chapel.</p>
+      <img src="REV OLONADE AND WIFE.jpg" alt="General Overseers" class="profile-img" />
+    </div>
+
+    <div id="bpCard" class="card">
+      <h2>Resident Pastor</h2>
+      <p><strong>Pastor (Mrs) Olawale</strong> is the Branch Pastor of Full Redemption Chapel, Gbogbo. She is a Chartered Manager at Obafemi Awolowo University and a dedicated shepherd with rich experience in administration and ministry.</p>
+      <img src="PASTOR MRS OLAWALE.jpg" alt="Pastor Olawale" class="profile-img" />
+    </div>
+  </div>
+
+  <footer>
+    <p>Contact us: +234 803 597 2650 | fullredemptionchapelgbogbo@gmail.com</p>
+    <p>
+      <a href="https://web.facebook.com/profile.php?id=61575573992524" style="color:white">Facebook</a> |
+      <a href="https://youtube.com/channel/UCGiNde3ceING9bDezoKVDgQ" style="color:white">YouTube</a>
+    </p>
+    <p>&copy; 2025 Full Redemption Chapel, Gbogbo</p>
+  </footer>
+
+  <script>
+    function toggleSection(id) {
+      const el = document.getElementById(id);
+      const isVisible = el.style.display === 'block';
+      document.querySelectorAll('.card').forEach(card => card.style.display = 'none');
+      if (!isVisible) el.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
