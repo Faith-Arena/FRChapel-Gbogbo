@@ -9,33 +9,50 @@
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f9f9f9;
+      font-size: 14px; /* Reduced font size */
     }
     header {
       background-color: #4b002d;
       color: white;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      text-align: center;
+      padding: 20px 10px;
     }
     header img {
-      height: 50px;
+      height: 60px;
+      display: block;
+      margin: 0 auto 10px auto;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 18px; /* Smaller size */
+      color: white; /* Ensure it is white */
+    }
+    nav {
+      margin-top: 10px;
     }
     nav a {
       color: white;
-      margin: 0 10px;
+      margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
       cursor: pointer;
+      font-size: 13px;
     }
     .container {
-      padding: 40px;
+      padding: 30px;
     }
     .section {
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
     h1, h2 {
       color: #4b002d;
+    }
+    h2 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 13px;
+      line-height: 1.5;
     }
     .card {
       background-color: white;
@@ -49,6 +66,7 @@
       color: white;
       text-align: center;
       padding: 20px;
+      font-size: 13px;
     }
     .profile-img {
       width: 100%;
@@ -56,11 +74,16 @@
       border-radius: 10px;
       margin-top: 10px;
     }
+    footer a {
+      color: white;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <header>
     <img src="GBOGBO.png" alt="Church Logo" />
+    <h1>Full Redemption Chapel, Gbogbo (Faith Arena)</h1>
     <nav>
       <a onclick="toggleSection('goCard')">About Our General Overseer</a>
       <a onclick="toggleSection('bpCard')">About Our Resident Pastor</a>
@@ -69,36 +92,36 @@
 
   <div class="container">
     <section class="section">
-      <h1>Welcome to Full Redemption Chapel, Gbogbo (Faith Arena)</h1>
       <p><strong>Venue:</strong> Behind Wema Bank Plc, Gbogbo, Modakeke, Osun State, Nigeria</p>
       <p><strong>Mission:</strong> To preach the undiluted Word of God and raise mature disciples in Christ.</p>
       <p><strong>Vision:</strong> To take the full message of the gospel to every lost soul across the world.</p>
     </section>
 
-    <!-- About Us Section -->
     <section class="section">
       <h2>About Full Redemption Chapel, Gbogbo</h2>
-      <p>Full Redemption Chapel, Gbogbo (Faith Arena) is a vibrant and spiritually empowering church in Modakeke, Osun State, Nigeria. We are part of the global movement of Jesus is Lord Foundation International, committed to sharing the Gospel and making disciples of Jesus Christ. Our church is a place where the Word of God is preached in its purest form, and individuals are nurtured in faith. We strive to create a welcoming environment where everyone can grow in their relationship with Christ and be part of a supportive community. Our mission is to raise mature disciples and impact lives positively, not just locally but globally.</p>
+      <p>Full Redemption Chapel, Gbogbo (Faith Arena) is a spiritually vibrant branch of the Jesus is Lord Foundation International. With a firm commitment to the truth of God’s Word, we are devoted to raising strong, Christ-like disciples through sound teaching, prayer, and community. The church serves as a beacon of hope, love, and transformation within Modakeke and beyond.</p>
     </section>
 
     <div id="goCard" class="card">
-      <h2>General Overseers</h2>
-      <p><strong>Rev. Dr. Francis Olonade</strong> is the General Overseer of Jesus is Lord Foundation International. Called and commissioned in 1980, he continues to lead a global evangelism movement. His wife, <strong>Rev. Dr. Grace Olonade</strong>, serves as Vice President and Senior Pastor of Full Redemption Chapel.</p>
+      <h2>About Our General Overseer</h2>
+      <p><strong>Rev. Dr. Francis Olonade</strong> is the esteemed General Overseer of Jesus is Lord Foundation International. He was called into ministry in 1980 and has since been a relentless voice of evangelism and revival across nations. Known for his powerful teaching and healing ministry, he has impacted countless lives with the Gospel. His ministry emphasizes holiness, spiritual growth, and equipping believers for end-time harvest.</p>
+      <p>He is supported by his wife, <strong>Rev. Dr. Grace Olonade</strong>, who serves as Vice President and Senior Pastor. She is a respected minister, counselor, and teacher of the Word. Together, they lead with integrity, vision, and deep spiritual insight, overseeing several branches globally and mentoring pastors and leaders across denominations.</p>
       <img src="REV OLONADE AND WIFE.jpg" alt="General Overseers" class="profile-img" />
     </div>
 
     <div id="bpCard" class="card">
-      <h2>Resident Pastor</h2>
-      <p><strong>Pastor (Mrs) Olawale</strong> is the Branch Pastor of Full Redemption Chapel, Gbogbo. She is a Chartered Manager at Obafemi Awolowo University and a dedicated shepherd with rich experience in administration and ministry.</p>
+      <h2>About Our Resident Pastor</h2>
+      <p><strong>Pastor (Mrs) Olawale</strong> is the Branch Pastor of Full Redemption Chapel, Gbogbo. She currently serves as the Principal Assistant Registrar at Obafemi Awolowo University, Ile-Ife. With a strong background in administration and spiritual leadership, she has been instrumental in the development and spiritual growth of the church.</p>
+      <p>Pastor Olawale is passionate about empowering others through teaching, mentoring, and example. Her leadership is marked by excellence, dedication to sound doctrine, and a heart for building a Christ-centered community.</p>
       <img src="PASTOR MRS OLAWALE.jpg" alt="Pastor Olawale" class="profile-img" />
     </div>
   </div>
 
   <footer>
-    <p>Contact us: +234 803 597 2650 | fullredemptionchapelgbogbo@gmail.com</p>
+    <p>Contact us: <a href="tel:+2348035972650">+234 803 597 2650</a> | <a href="mailto:fullredemptionchapelgbogbo@gmail.com">fullredemptionchapelgbogbo@gmail.com</a></p>
     <p>
-      <a href="https://web.facebook.com/profile.php?id=61575573992524" style="color:white">Facebook</a> |
-      <a href="https://youtube.com/channel/UCGiNde3ceING9bDezoKVDgQ" style="color:white">YouTube</a>
+      <a href="https://web.facebook.com/profile.php?id=61575573992524">Facebook</a> |
+      <a href="https://youtube.com/channel/UCGiNde3ceING9bDezoKVDgQ">YouTube</a>
     </p>
     <p>&copy; 2025 Full Redemption Chapel, Gbogbo</p>
   </footer>
