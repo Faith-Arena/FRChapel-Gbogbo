@@ -14,52 +14,56 @@
     header {
       background-color: #4b002d;
       color: white;
-      padding: 20px;
-      text-align: center;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
     header img {
-      height: 60px;
-      display: block;
-      margin: 0 auto 10px auto;
+      height: 50px;
     }
     header h1 {
       margin: 0;
-      font-size: 16px;
+      font-size: 18px;
       color: white;
     }
-    nav {
-      margin-top: 10px;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
+    .menu-toggle {
+      font-size: 24px;
       cursor: pointer;
-      font-size: 12px;
+      background: none;
+      border: none;
+      color: white;
+    }
+    .menu {
+      display: none;
+      background-color: #4b002d;
+      color: white;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      padding: 10px 0;
+    }
+    .menu a {
+      display: block;
+      padding: 10px 20px;
+      color: white;
+      text-decoration: none;
+      border-top: 1px solid #ffffff33;
+    }
+    .menu a:hover {
+      background-color: #5c0038;
     }
     .container {
       padding: 30px;
     }
-    .section {
-      margin-bottom: 30px;
-    }
-    h1, h2 {
-      color: #4b002d;
-    }
     h2 {
-      font-size: 16px;
+      color: #4b002d;
+      font-size: 18px;
     }
     p {
       font-size: 13px;
       line-height: 1.5;
-    }
-    .card {
-      background-color: white;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      padding: 20px;
-      margin-top: 20px;
-      display: none;
     }
     footer {
       background-color: #4b002d;
@@ -68,52 +72,108 @@
       padding: 20px;
       font-size: 13px;
     }
-    .profile-img {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 10px;
-      margin-top: 10px;
-    }
     footer a {
       color: white;
       text-decoration: underline;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    form input, form textarea {
+      padding: 8px;
+      margin: 5px 0;
+      font-size: 13px;
+    }
+    form button {
+      background-color: #4b002d;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    .hidden-section {
+      display: none;
+      background-color: white;
+      padding: 20px;
+      margin: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body>
   <header>
     <img src="GBOGBO.png" alt="Church Logo" />
-    <h1>Full Redemption Chapel, Gbogbo (Faith Arena)</h1>
-    <nav>
-      <a onclick="toggleSection('goCard')">About Our General Overseer</a>
-      <a onclick="toggleSection('bpCard')">About Our Pastor</a>
-    </nav>
+    <h1>Full Redemption Chapel, Gbogbo</h1>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
   </header>
 
+  <nav class="menu" id="menu">
+    <a href="#" onclick="toggleSection('goSection')">About General Overseer</a>
+    <a href="#" onclick="toggleSection('pastorSection')">About Resident Pastor</a>
+    <a href="#" onclick="toggleSection('scheduleSection')">Weekly Service Schedule</a>
+    <a href="#" onclick="toggleSection('eventSection')">Event & Announcements</a>
+    <a href="#" onclick="toggleSection('prayerSection')">Prayer Request Form</a>
+  </nav>
+
   <div class="container">
-    <section class="section">
-      <p><strong>Venue:</strong> Behind Wema Bank Plc, Gbogbo, Modakeke, Osun State, Nigeria</p>
-      <p><strong>Mission:</strong> To preach the undiluted Word of God and raise mature disciples in Christ.</p>
-      <p><strong>Vision:</strong> To take the whole word to the lost souls in the whole world.</p>
+    <section>
+      <h2><strong>Venue</strong></h2>
+      <p>Behind Wema Bank Plc, Gbogbo, Modakeke, Osun State, Nigeria</p>
     </section>
 
-    <section class="section">
-      <h2>About Full Redemption Chapel, Gbogbo</h2>
-      <p>Full Redemption Chapel, Gbogbo (Faith Arena) is a vibrant branch of the Jesus is Lord Foundation International. We're committed to building a community rooted in Christ, reaching souls with the full gospel, and maturing believers through sound teaching and spiritual growth.</p>
+    <section>
+      <h2><strong>Mission</strong></h2>
+      <p>To preach the undiluted Word of God and raise mature disciples in Christ.</p>
     </section>
 
-    <div id="goCard" class="card">
-      <h2 style="font-size: 15px;">About Our General Overseer</h2>
-      <p><strong>Rev. Dr. Francis Olonade</strong> is the esteemed General Overseer of Jesus is Lord Foundation International. Called into ministry in 1980, he is a passionate evangelist, teacher, and spiritual father to many. Through his dedication to the Word and global outreach, he continues to lead a powerful gospel movement across nations.</p>
-      <p>He is supported by his wife, <strong>Rev. Dr. Grace Olonade</strong>, who serves as Vice President and Senior Pastor. She is a gifted minister and teacher of the Word, working side-by-side with her husband to mentor ministers, teach the Bible, and advance the Kingdom of God globally.</p>
-      <img src="REV OLONADE AND WIFE.jpg" alt="General Overseers" class="profile-img" />
-    </div>
+    <section>
+      <h2><strong>Vision</strong></h2>
+      <p>To take the whole word to the lost souls in the whole world.</p>
+    </section>
 
-    <div id="bpCard" class="card">
-      <h2 style="font-size: 15px;">About Our Pastor</h2>
-      <p><strong>Pastor (Mrs) Olawale</strong> is the Branch Pastor of Full Redemption Chapel, Gbogbo. She currently serves as the Principal Assistant Registrar at Obafemi Awolowo University. With a background in administration and ministry, she is a passionate, spirit-filled leader focused on spiritual maturity and excellence in service.</p>
-      <img src="PASTOR MRS OLAWALE.jpg" alt="Pastor Olawale" class="profile-img" />
-    </div>
+    <section>
+      <h2>About Us</h2>
+      <p>Full Redemption Chapel, Gbogbo (Faith Arena) is a vibrant branch of the Jesus is Lord Foundation International. We are committed to building a Christ-centered community, reaching souls, and nurturing believers through sound teaching and spiritual growth.</p>
+    </section>
+  </div>
+
+  <!-- HIDDEN SECTIONS -->
+
+  <div class="hidden-section" id="goSection">
+    <h2>About General Overseer</h2>
+    <p><strong>Rev. Dr. Francis Olonade</strong> is the General Overseer of Jesus is Lord Foundation International. Called in 1980, he is a passionate evangelist and teacher leading a global gospel mission.</p>
+    <p><strong>Rev. Dr. Grace Olonade</strong> serves as Vice President and Senior Pastor, known for her dynamic teaching and leadership alongside her husband.</p>
+  </div>
+
+  <div class="hidden-section" id="pastorSection">
+    <h2>About Resident Pastor</h2>
+    <p><strong>Pastor (Mrs) Olawale</strong> is the Branch Pastor of Full Redemption Chapel, Gbogbo. She is also the Principal Assistant Registrar at Obafemi Awolowo University. Her dedication to ministry and excellence in administration helps guide the church spiritually and structurally.</p>
+  </div>
+
+  <div class="hidden-section" id="scheduleSection">
+    <h2>Weekly Service Schedule</h2>
+    <ul>
+      <li><strong>Sunday:</strong> 7:00 AM</li>
+      <li><strong>Wednesday:</strong> 6:00 AM</li>
+      <li><strong>Friday:</strong> 6:00 AM</li>
+    </ul>
+  </div>
+
+  <div class="hidden-section" id="eventSection">
+    <h2>Event & Announcements</h2>
+    <p><strong>Annual End Time Army Convention 2025 (ETAC 2025)</strong><br> Date: July 31 – August 4, 2025</p>
+  </div>
+
+  <div class="hidden-section" id="prayerSection">
+    <h2>Prayer Request Form</h2>
+    <form id="prayerForm">
+      <input type="text" name="from_name" placeholder="Your Name" required />
+      <input type="email" name="reply_to" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Prayer Request" rows="4" required></textarea>
+      <button type="submit">Submit Request</button>
+    </form>
+    <p id="formMessage"></p>
   </div>
 
   <footer>
@@ -125,13 +185,34 @@
     <p>&copy; 2025 Full Redemption Chapel, Gbogbo</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
   <script>
-    function toggleSection(id) {
-      const el = document.getElementById(id);
-      const isVisible = el.style.display === 'block';
-      document.querySelectorAll('.card').forEach(card => card.style.display = 'none');
-      if (!isVisible) el.style.display = 'block';
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
     }
+
+    function toggleSection(id) {
+      document.querySelectorAll('.hidden-section').forEach(sec => sec.style.display = 'none');
+      const target = document.getElementById(id);
+      if (target) target.style.display = 'block';
+      document.getElementById('menu').style.display = 'none';
+    }
+
+    (function() {
+      emailjs.init("ag8s9l__TJj1V3-bL");
+    })();
+
+    document.getElementById('prayerForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      emailjs.sendForm('service_gczl22g', 'template_1fr835i', this)
+        .then(() => {
+          document.getElementById('formMessage').innerText = 'Prayer request sent successfully!';
+          this.reset();
+        }, (error) => {
+          document.getElementById('formMessage').innerText = 'Error sending request. Please try again.';
+        });
+    });
   </script>
 </body>
 </html>
