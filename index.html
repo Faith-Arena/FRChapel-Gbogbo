@@ -9,37 +9,39 @@
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f9f9f9;
-      font-size: 14px;
+      font-size: 16px;
     }
     header {
       background-color: #4b002d;
       color: white;
       padding: 15px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      text-align: center;
+      position: relative;
     }
     header img {
-      height: 50px;
+      height: 60px;
     }
     header h1 {
-      margin: 0;
-      font-size: 18px;
+      margin: 10px 0 0;
+      font-size: 20px;
       color: white;
     }
     .menu-toggle {
-      font-size: 24px;
+      font-size: 28px;
       cursor: pointer;
       background: none;
       border: none;
       color: white;
+      position: absolute;
+      top: 15px;
+      right: 20px;
     }
     .menu {
       display: none;
       background-color: #4b002d;
       color: white;
       position: absolute;
-      top: 60px;
+      top: 70px;
       left: 0;
       width: 100%;
       padding: 10px 0;
@@ -59,18 +61,17 @@
     }
     h2 {
       color: #4b002d;
-      font-size: 18px;
+      font-size: 20px;
     }
-    p {
-      font-size: 13px;
-      line-height: 1.5;
+    p, li, input, textarea, button {
+      font-size: 16px;
     }
     footer {
       background-color: #4b002d;
       color: white;
       text-align: center;
       padding: 20px;
-      font-size: 13px;
+      font-size: 14px;
     }
     footer a {
       color: white;
@@ -81,9 +82,8 @@
       flex-direction: column;
     }
     form input, form textarea {
-      padding: 8px;
-      margin: 5px 0;
-      font-size: 13px;
+      padding: 10px;
+      margin: 8px 0;
     }
     form button {
       background-color: #4b002d;
@@ -98,6 +98,12 @@
       padding: 20px;
       margin: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .profile-img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      margin-top: 10px;
     }
   </style>
 </head>
@@ -118,45 +124,42 @@
 
   <div class="container">
     <section>
-      <h2><strong>Venue</strong></h2>
+      <h2>Venue</h2>
       <p>Behind Wema Bank Plc, Gbogbo, Modakeke, Osun State, Nigeria</p>
     </section>
-
     <section>
-      <h2><strong>Mission</strong></h2>
+      <h2>Mission</h2>
       <p>To preach the undiluted Word of God and raise mature disciples in Christ.</p>
     </section>
-
     <section>
-      <h2><strong>Vision</strong></h2>
+      <h2>Vision</h2>
       <p>To take the whole word to the lost souls in the whole world.</p>
     </section>
-
     <section>
       <h2>About Us</h2>
       <p>Full Redemption Chapel, Gbogbo (Faith Arena) is a vibrant branch of the Jesus is Lord Foundation International. We are committed to building a Christ-centered community, reaching souls, and nurturing believers through sound teaching and spiritual growth.</p>
     </section>
   </div>
 
-  <!-- HIDDEN SECTIONS -->
-
   <div class="hidden-section" id="goSection">
     <h2>About General Overseer</h2>
     <p><strong>Rev. Dr. Francis Olonade</strong> is the General Overseer of Jesus is Lord Foundation International. Called in 1980, he is a passionate evangelist and teacher leading a global gospel mission.</p>
     <p><strong>Rev. Dr. Grace Olonade</strong> serves as Vice President and Senior Pastor, known for her dynamic teaching and leadership alongside her husband.</p>
+    <img src="REV OLONADE AND WIFE.jpg" alt="General Overseers" class="profile-img" />
   </div>
 
   <div class="hidden-section" id="pastorSection">
     <h2>About Resident Pastor</h2>
     <p><strong>Pastor (Mrs) Olawale</strong> is the Branch Pastor of Full Redemption Chapel, Gbogbo. She is also the Principal Assistant Registrar at Obafemi Awolowo University. Her dedication to ministry and excellence in administration helps guide the church spiritually and structurally.</p>
+    <img src="PASTOR MRS OLAWALE.jpg" alt="Pastor Olawale" class="profile-img" />
   </div>
 
   <div class="hidden-section" id="scheduleSection">
     <h2>Weekly Service Schedule</h2>
     <ul>
-      <li><strong>Sunday:</strong> 7:00 AM</li>
-      <li><strong>Wednesday:</strong> 6:00 AM</li>
-      <li><strong>Friday:</strong> 6:00 AM</li>
+      <li><strong>SUNDAY:</strong> 7:00 AM</li>
+      <li><strong>WEDNESDAY:</strong> 6:00 AM</li>
+      <li><strong>FRIDAY:</strong> 6:00 AM</li>
     </ul>
   </div>
 
